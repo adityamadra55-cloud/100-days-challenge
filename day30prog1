@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+    int arr[5];
+    int a, even = 0, odd = 0;
+    printf("Enter elements:");
+    for (a = 0; a<5; a++)
+    {
+        scanf("%d", &arr[a]);
+    }
+    for (a = 0; a<5; a++)
+    {
+        printf("%d\t", arr[a]);
+    }
+    printf("\n");
+    for (a = 0; a<5; a++)
+    {
+        if (arr[a]%2 == 0)
+        {
+            even++;
+            
+        }
+        else if(arr[a]%2 == 1)
+        {
+            odd++;
+        }
+    }
+        printf("No. of even elements = %d\n", even);
+        printf("No. of odd elements = %d", odd);
+    
+    return 0;
+}
