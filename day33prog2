@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, i, pos, num;
+
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+
+    int a[n+1];
+
+    printf("Enter elements: ");
+    for(i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+
+    printf("Enter element to insert: ");
+    scanf("%d", &num);
+
+    pos = n;
+
+    for(i = 0; i < n; i++)
+    {
+        if(a[i] > num)
+        {
+            pos = i;
+            break;
+        }
+    }
+
+    for(i = n; i > pos; i--)
+    {
+        a[i] = a[i-1];
+    }
+
+    a[pos] = num;
+
+    printf("Updated array: ");
+    for(i = 0; i <= n; i++)
+    {
+        printf("%d ", a[i]);
+    }
+
+    return 0;
+}
