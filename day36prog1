@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+    int arr[3][3];
+    int a, b;
+    printf("Enter elements:");
+    for(a = 0; a<3; a++)
+    {
+        for (b = 0; b<3; b++)
+        {
+            scanf("%d", &arr[a][b]);
+        }
+    }
+    for (a = 0; a<3; a++)
+    {
+        for (b = 0; b<3; b++)
+        {
+            printf("%d\t", arr[a][b]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
