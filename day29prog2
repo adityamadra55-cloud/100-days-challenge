@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+    int arr[5];
+    int a, min, max;
+    printf("Enter elements:");
+    for (a = 0; a<5; a++)
+    {
+        scanf("%d", &arr[a]);
+    }
+    for (a = 0; a<5; a++)
+    {
+        printf("%d\t", arr[a]);
+    }
+    printf("\n");
+    max = arr[0];
+    min = arr[0];
+    for (a = 1; a<5; a++)
+    {
+        if (arr[a]>max)
+        {
+            max = arr[a];
+        }
+        if (arr[a]<min)
+        {
+            min = arr[a];
+        }
+    }
+    printf("Maximum element = %d", max);
+    printf("Minimum element = %d", min);
+    return 0;
+}
