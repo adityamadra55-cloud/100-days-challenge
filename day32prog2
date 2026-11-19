@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, temp, rem, i;
+    int count[10] = {0};
+    int max = 0, digit = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    temp = n;
+
+    while(temp > 0)
+    {
+        rem = temp % 10;
+        count[rem]++;
+        temp = temp / 10;
+    }
+
+    for(i = 0; i < 10; i++)
+    {
+        if(count[i] > max)
+        {
+            max = count[i];
+            digit = i;
+        }
+    }
+
+    printf("%d", digit);
+
+    return 0;
+}
